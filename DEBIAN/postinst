@@ -1,0 +1,7 @@
+#!/bin/sh
+
+chmod +x /opt/authy/authy
+
+ln -s /opt/authy/authy /usr/bin
+
+exit 0

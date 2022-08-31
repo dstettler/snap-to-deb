@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm -rf /opt/authy-deb-generator
+rm /etc/apt/apt.conf.d/05snap-check-update
+rm /usr/bin/authy
+
+exit 0

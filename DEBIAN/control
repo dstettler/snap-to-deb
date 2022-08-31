@@ -1,0 +1,6 @@
+Package: authy
+Version: 2.2.1
+Maintainer: devon.stettler@tutanota.com
+Architecture: all
+Description: Authy snap converted to .deb based on AUR PKGBUILD
+Depends: libnss3, libgtk-3-0

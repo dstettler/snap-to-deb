@@ -1,11 +1,9 @@
-# authy-deb-generator
+# snap-to-deb
 
-Generates a .deb file from the current snap version of Authy.
-
-Based on the AUR PKGBUILD with the same purpose.
+Generates a .deb file from the current snap version of a given program.
 
 I'll try to keep this repo up to date but it's really only for personal purposes.
-If an update comes out and I don't see it please make a PR and I should accept as soon as I see the email.
+If an update for one of the maintained packages comes out and I don't see it please make a PR and I should accept as soon as I see the email.
 
 ### NOTE
 This requires the following commands to be able to run: `unsquashfs`, `sha256sum`, `wget`, and `dpkg-deb`.

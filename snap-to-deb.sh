@@ -54,7 +54,7 @@ setup () {
 
 	# Copy package-manager files and prep for packaging
 	cp "pkgs/${pkgname}/${desktop}" "${pkgname}/usr/share/applications"
-	cp -rf "../pkgs/${pkgname}/DEBIAN" "./${pkgname}"
+	cp -rf "pkgs/${pkgname}/DEBIAN" "./${pkgname}"
 	chmod 755 "${pkgname}/DEBIAN/postinst"
 	chmod 755 "${pkgname}/DEBIAN/postrm"
 

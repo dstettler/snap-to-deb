@@ -49,12 +49,12 @@ setup () {
 	# Copy package files to proper directories
 	cd "unsquashed"
 	cp -rf * "../${pkgname}/opt/${pkgname}"
-	cp "meta/gui/icon.png" "../${pkgname}/usr/share/pixmaps/authy.png"
-	cp "pkgs/${pkgname}/${desktop}" "../${pkgname}/usr/share/applications"
+	cp "${_iconloc}" "../${pkgname}/usr/share/pixmaps/authy.png"
 	cd ..
 
 	# Copy package-manager files and prep for packaging
-	cp -rf "pkgs/${pkgname}/DEBIAN" "./${pkgname}"
+	cp "pkgs/${pkgname}/${desktop}" "${pkgname}/usr/share/applications"
+	cp -rf "../pkgs/${pkgname}/DEBIAN" "./${pkgname}"
 	chmod 755 "${pkgname}/DEBIAN/postinst"
 	chmod 755 "${pkgname}/DEBIAN/postrm"
 
@@ -106,7 +106,7 @@ ask_install() {
 	esac
 }
 
-#prep
-#setup
-#package
+prep
+setup
+package
 #ask_install

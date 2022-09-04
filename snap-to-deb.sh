@@ -2,12 +2,12 @@
 
 if [ 0 != $(id -u) ]; then echo "This script must be run as root."; exit 1; fi
 
-pkgname=authy
-_snapid="H8ZpNgIoPyvmkgxOWw5MSzsXK1wRZiHn"
-_snaprev="11"
+pkgname=$1
 
-src="https://api.snapcraft.io/api/v1/snaps/download/${_snapid}_${_snaprev}.snap"
-sha256sums="fdad2931755dee6129ee868dda604826fe6e3afd7343782f7e08b3d572fd6663  ${_snapid}_${_snaprev}.snap"
+echo "Installing package: $pkgname"
+
+source "pkgs/$pkgname/sources"
+echo $src
 
 prep () {
 	echo "Downloading snap"
@@ -50,11 +50,11 @@ setup () {
 	cd "unsquashed"
 	cp -rf * "../${pkgname}/opt/${pkgname}"
 	cp "meta/gui/icon.png" "../${pkgname}/usr/share/pixmaps/authy.png"
-	cp "../authy.desktop" "../${pkgname}/usr/share/applications"
+	cp "pkgs/${pkgname}/${desktop}" "../${pkgname}/usr/share/applications"
 	cd ..
 
 	# Copy package-manager files and prep for packaging
-	cp -rf "./DEBIAN" "./${pkgname}"
+	cp -rf "pkgs/${pkgname}/DEBIAN" "./${pkgname}"
 	chmod 755 "${pkgname}/DEBIAN/postinst"
 	chmod 755 "${pkgname}/DEBIAN/postrm"
 
@@ -106,7 +106,7 @@ ask_install() {
 	esac
 }
 
-prep
-setup
-package
-ask_install
+#prep
+#setup
+#package
+#ask_install

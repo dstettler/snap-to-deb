@@ -1,0 +1,8 @@
+_snapid="ZDQ1iJwjyM50MOnWOKwDNtFZmfc9R0A5"
+_snaprev="131"
+
+src="https://api.snapcraft.io/api/v1/snaps/download/${_snapid}_${_snaprev}.snap"
+sha256sums="fdad2931755dee6129ee868dda604826fe6e3afd7343782f7e08b3d572fd6663  ${_snapid}_${_snaprev}.snap" # I believe the SHASUM here is incorrect
+
+desktop=Instagraph.desktop
+_iconloc=meta/gui/Instagraph.png

@@ -1,5 +1,11 @@
-# snap-to-deb
+## PLEASE NOTE
+This project is not being actively updated. I have some other side projects that I've been more actively working on privately, and for the time being this is on the backburner. For authy snap-to-deb, my other project is going to be kept up to date for the time being until I come back to this.
 
+Thanks,
+
+Devon
+
+# snap-to-deb
 Generates a .deb file from the current snap version of a given program.
 
 I'll try to keep this repo up to date but it's really only for personal purposes.
